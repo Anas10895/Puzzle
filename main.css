@@ -1,0 +1,15 @@
+
+#scale{
+  background-color: black; 
+}
+
+.picture {
+  border: 1px solid black;
+}
+#puzzle{
+  border: 2px solid green ;
+  
+}
+canvas{
+  border: 2px;
+}

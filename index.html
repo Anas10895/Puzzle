@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rotating Puzzle</title>
+
+  <link rel = "stylesheet" href = "main.css" />
+</head>
+<body>
+  <div id="title">
+    <h2>Rotating Puzzle</h2>
+  </div>
+  <div id="slider">
+    <form>
+      <label>Easy</label>
+      <input type="range" id="scale" value="4" min="2" max="5" step="1">
+      <label>Hard</label>
+    </form>
+    <br>
+  </div>
+  <div id="main" class="main">
+    <canvas id="puzzle" width="600px" height="600px"></canvas>
+  </div>
+    <img id=cImge; src= "https://source.unsplash.com/random/600x600">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <script src="sliding.js"></script>
+  
+</body>
+</html>
