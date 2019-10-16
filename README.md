@@ -1,6 +1,6 @@
 # Puzzle
 
-#How can i play ?
+<h2>How can i play ?</h2>
 the goal of this game is to move evry piece to the rghit place by moving one square each time.
 
 #Why should i play puzzle game ? 
