@@ -1,14 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <link rel="stylesheet" href="main.css" />
+<!doctype html>
+<html>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<head>
+  <meta charset="utf-8">
+  <title>Rotating Puzzle</title>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
+
 <body>
-        <a href="index.html" class="button"><h1>Start the game</h1> </a>
-    </body>
+  <div id="title">
+    <h2>Rotating Puzzle</h2>
+  </div>
+
+  <div class="split left">
+
+
+    <div id="slider">
+      <form>
+        <label>Easy</label>
+        <input type="range" id="scale" value="3" min="2" max="4" step="1">
+        <label>Hard</label>
+      </form>
+      <br>
+    </div>
+    <div id="main" class="main">
+      <canvas id="puzzle" width="600px" height="600px"></canvas>
+    </div>
+  </div>
+
+  <div class="split right">
+
+
+    <img id=cImge; src="https://source.unsplash.com/random/600x600">
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <script src="rotating.js"></script>
+
+</body>
+
 </html>

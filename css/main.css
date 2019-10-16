@@ -5,11 +5,13 @@ html{
   /* https://www.xmple.com/wallpaper/white-lines-stripes-streaks-grey-2880x1800-c2-ffffff-dcdcdc-l2-54-108-a-30-f-1.svg */
 
 }
-#main{
+
+
+.main{
   
   display: inline-block;
-  margin-top: 70px;
-  margin-left: 38px;
+  margin-top: 10%;
+  margin-left: 10%;
   text-align: center;
 
 
@@ -31,7 +33,6 @@ html{
   position: absolute;
   width: 50%;
   height: 100%;
-  overflow: hidden;
 }
 /* https://www.xmple.com/wallpaper/white-lines-stripes-streaks-grey-2880x1800-c2-ffffff-dcdcdc-l2-54-108-a-30-f-1.svg */
 .split.left {
@@ -57,11 +58,6 @@ html{
   align-items: center;
     /* background: url(https://www.xmple.com/wallpaper/gradient-yellow-blue-linear-2880x1800-c2-ffff00-00ced1-a-0-f-14.svg); */
   /* background: linear-gradient(to left, LightYellow 	 	  , DarkKhaki  ); */
-  /* -moz-transform: scaleX(-1) scaleY(-1);
-  -o-transform: scaleX(-1) scaleY(-1);
-  -webkit-transform: scaleX(-1) scaleY(-1);
-  transform: scaleX(-1) scaleY(-1);
-} */
   /* ) center center no-repeat; */
 }
 
@@ -73,7 +69,8 @@ html{
   color:black;
   font-size: 29px;
   font-weight: 800;
-  font-family: 'Chalkduster'
+  font-family: 'Chalkduster';
+  padding:20px;
 
 }
 #scale{
@@ -82,6 +79,7 @@ html{
   height: 15px;
   background: #d864646c;
   border-radius: 12px;
+  margin-top:10;
 
 }
 
@@ -95,16 +93,19 @@ html{
   cursor: pointer;
 }
 
-#scale::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: rgb(255, 0, 0);
-  cursor: pointer;
+
+
+body #lb{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  width: 25%;
+ padding: 10;   
+ font-size : 50px
+}
+a{
+  text-decoration:none;
+  
 }
 
-.button{
-  -webkit-appearance: none;
-
-  text-align: center;
-}

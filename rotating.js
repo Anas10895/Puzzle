@@ -90,7 +90,7 @@ function drawTiles() {
 function distance(x1, y1, x2, y2) {
   return Math.abs(x1 - x2) + Math.abs(y1 - y2);
 }
-
+//move the sected peise to the empty square 
 function slideTile(toLoc, fromLoc) {
   if (!solved) {
     boardParts[toLoc.x][toLoc.y].x = boardParts[fromLoc.x][fromLoc.y].x;
