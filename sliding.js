@@ -4,10 +4,10 @@ var img = new Image();
 img.src = "https://source.unsplash.com/random/600x600";
 img.addEventListener('load', drawTiles, false);
 
-var boardSize = document.getElementById('puzzle').width;
-var tileCount = document.getElementById('scale').value;
+var boardSize = document.getElementById('puzzle').width; //  600px
+var tileCount = document.getElementById('scale').value; // 3
 
-var tileSize = boardSize / tileCount;
+var tileSize = boardSize / tileCount; // 200 px
 
 var clickLoc = new Object;
 clickLoc.x = 0;
@@ -17,34 +17,43 @@ var emptyLoc = new Object;
 emptyLoc.x = 0;
 emptyLoc.y = 0;
 
-var solved = false;
+solved = false;
 
 var boardParts;
 setBoard();
 
-document.getElementById('scale').onchange = function() {
+// if the scale change re draw
+document.getElementById('scale').onchange = function () {
   tileCount = this.value;
-  tileSize = boardSize / tileCount;
+  tileSize = boardSize / tileCount; //200px
   setBoard();
   drawTiles();
 };
 
-document.getElementById('puzzle').onclick = function(e) {
+//take the position of puzzle p i click 
+document.getElementById('puzzle').onclick = function (e) {
+ //get intger x value
   clickLoc.x = Math.floor((e.pageX - this.offsetLeft) / tileSize);
+  console.log(clickLoc.x);
+ 
+  //get intger y value
   clickLoc.y = Math.floor((e.pageY - this.offsetTop) / tileSize);
+  console.log(clickLoc.y);
   if (distance(clickLoc.x, clickLoc.y, emptyLoc.x, emptyLoc.y) == 1) {
     slideTile(emptyLoc, clickLoc);
     drawTiles();
   }
   if (solved) {
-    setTimeout(function() {Swal.fire(
-      'Good job!',
-      '',
-      'success'
-    );}, 500);
+    setTimeout(function () {
+      Swal.fire(
+        'Good job!',
+        '',
+        'success'
+      );
+    }, 1000);
   }
 };
-
+//draw the board
 function setBoard() {
   boardParts = new Array(tileCount);
   for (var i = 0; i < tileCount; ++i) {
@@ -53,22 +62,26 @@ function setBoard() {
       boardParts[i][j] = new Object;
       boardParts[i][j].x = (tileCount - 1) - i;
       boardParts[i][j].y = (tileCount - 1) - j;
+
     }
   }
-  emptyLoc.x = boardParts[tileCount - 1][tileCount - 1].x;
-  emptyLoc.y = boardParts[tileCount - 1][tileCount - 1].y;
-  solved = false;
+  emptyLoc.x = 0;
+  emptyLoc.y = 0;
+
 }
 
 function drawTiles() {
-  context.clearRect ( 0 , 0 , boardSize , boardSize );
+  //clear the epmty square 
+  context.clearRect(0, 0, boardSize, boardSize);
   for (var i = 0; i < tileCount; ++i) {
     for (var j = 0; j < tileCount; ++j) {
       var x = boardParts[i][j].x;
       var y = boardParts[i][j].y;
-      if(i != emptyLoc.x || j != emptyLoc.y || solved == true) {
+      if (i != emptyLoc.x || j != emptyLoc.y || solved == true) {
+        // each part of the image(image, sx, sy, sw, sh, dx, dy, dw, dh)
         context.drawImage(img, x * tileSize, y * tileSize, tileSize, tileSize,
-            i * tileSize, j * tileSize, tileSize, tileSize);
+          i * tileSize, j * tileSize, tileSize, tileSize);
+          
       }
     }
   }

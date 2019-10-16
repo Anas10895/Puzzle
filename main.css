@@ -1,15 +1,110 @@
+html{
+  background-image: url(https://www.xmple.com/wallpaper/gradient-blue-linear-white-2880x1800-c2-00bfff-ffffff-a-285-f-14.svg)
+  /* background:url(https://www.xmple.com/wallpaper/white-lines-stripes-streaks-grey-2880x1800-c2-ffffff-dcdcdc-l2-54-108-a-30-f-1.svg) */
 
-#scale{
-  background-color: black; 
+  /* https://www.xmple.com/wallpaper/white-lines-stripes-streaks-grey-2880x1800-c2-ffffff-dcdcdc-l2-54-108-a-30-f-1.svg */
+
+}
+#main{
+  
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 38px;
+  text-align: center;
+
+
+}
+#slider{
+  color: black; 
+  text-align: center;
+  
+
 }
 
-.picture {
-  border: 1px solid black;
-}
 #puzzle{
-  border: 2px solid green ;
+  display: inline-block;
+  background-color: white;
+  border: 2px solid black ;
   
 }
-canvas{
-  border: 2px;
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+/* https://www.xmple.com/wallpaper/white-lines-stripes-streaks-grey-2880x1800-c2-ffffff-dcdcdc-l2-54-108-a-30-f-1.svg */
+.split.left {
+  left:0;
+  /* background: url(https://www.xmple.com/wallpaper/gradient-yellow-blue-linear-2880x1800-c2-ffff00-00ced1-a-0-f-14.svg) */
+  /* background: url(https://www.xmple.com/wallpaper/white-streaks-black-lines-stripes-2880x1800-c2-000000-f0fff0-l2-30-30-a-270-f-1.svg) */
+  /* background-image: linear-gradient(to right, LightYellow 	 	  , DarkKhaki ); */
+/* \\https://www.xmple.com/wallpaper/red-lines-white-streaks-stripes-2880x1800-c2-ffffff-b22222-l2-60-60-a-225-f-1.svg */
+
+
+   /* center center no-repeat; */
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.split.right {
+  right:0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    /* background: url(https://www.xmple.com/wallpaper/gradient-yellow-blue-linear-2880x1800-c2-ffff00-00ced1-a-0-f-14.svg); */
+  /* background: linear-gradient(to left, LightYellow 	 	  , DarkKhaki  ); */
+  /* -moz-transform: scaleX(-1) scaleY(-1);
+  -o-transform: scaleX(-1) scaleY(-1);
+  -webkit-transform: scaleX(-1) scaleY(-1);
+  transform: scaleX(-1) scaleY(-1);
+} */
+  /* ) center center no-repeat; */
+}
+
+
+
+
+#title{
+  text-align: center;
+  color:black;
+  font-size: 29px;
+  font-weight: 800;
+  font-family: 'Chalkduster'
+
+}
+#scale{
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  background: #d864646c;
+  border-radius: 12px;
+
+}
+
+#scale::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+#scale::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.button{
+  -webkit-appearance: none;
+
+  text-align: center;
 }
