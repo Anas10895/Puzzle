@@ -48,8 +48,13 @@ document.getElementById('puzzle').onclick = function (e) {
       Swal.fire(
         'Good job!',
         '',
-        'success'
+        'success',
+        
+        onclick =function refreshPage(){
+          window.location.reload();
+      } 
       );
+      
     }, 1000);
   }
 };
